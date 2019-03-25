@@ -20,7 +20,30 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         valueTextField.attributedPlaceholder = placeholder
-        valueTextField.addTarget(self, action: #selector(), for: .editingChanged)
+        valueTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        disbaleButtons()
+    }
+    
+    @objc func textFieldDidChange() {
+        if valueTextField.text == "" {
+            disbaleButtons()
+        } else {
+            enableButtons()
+        }
+    }
+    
+    func disbaleButtons() {
+        binaryButton.isEnabled = false
+        binaryButton.alpha = 0.5
+        binaryButton.isEnabled = false
+        binaryButton.alpha = 0.5
+    }
+    
+    func enableButtons() {
+        binaryButton.isEnabled = true
+        binaryButton.alpha = 1.0
+        binaryButton.isEnabled = true
+        binaryButton.alpha = 1.0
     }
     
     @IBAction func binaryTapped(_ sender: Any) {
