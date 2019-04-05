@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         valueTextField.attributedPlaceholder = placeholder
         valueTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         disbaleButtons()
+
     }
     
     @objc func textFieldDidChange() {
