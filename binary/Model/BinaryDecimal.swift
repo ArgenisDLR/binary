@@ -6,7 +6,7 @@
 //  Copyright © 2019 argenis delarosa. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class BinaryDecimal {
     var bits: [Int]?
@@ -33,7 +33,7 @@ class BinaryDecimal {
             }
         }
 
-        let stringFromIntArray = binaryRows.map( String($0) )
+        let stringFromIntArray = binaryRows.map { String($0) }
         return stringFromIntArray.joined()
     }
     
@@ -57,4 +57,4 @@ class BinaryDecimal {
             return 0
         }
     }
-}
+
