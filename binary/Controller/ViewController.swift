@@ -52,7 +52,7 @@ class ViewController: UIViewController {
             binaryButton.alpha = 1.0
             decimalButton.alpha = 0.5
             guard let string = valueTextField.text, let _ = Int(string) else { return }
-            let binaryDigit = BinaryDecimal(intFromString)
+            let binaryDigit = BinaryDecimal(0)
             valueTextField.text = "\(binaryDigit.calculateBinaryValueForInt())"
         }
     }

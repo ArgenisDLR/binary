@@ -26,7 +26,7 @@ class BinaryDecimal {
         var binaryRows: [Int] = []
         guard let int = integer else { return "Error" }
         for row in rows {
-            let binaryDigit = oneOrZero(forValue: integer, with: rows)
+            let binaryDigit = oneOrZero(forValue: integer!, with: rows.count)
             binaryRows.append(binaryDigit)
             if binaryDigit == 1 {
                 newInt = newInt - row
